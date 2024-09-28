@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emobility1 -->
+      <package
+            uri="http://www.example.org/process"
+            class="emobility.Process.ProcessPackage"
+            genModel="model/emobility1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emobility1 -->
+      <package
+            uri="http://www.example.org/field"
+            class="emobility.Field.FieldPackage"
+            genModel="model/emobility1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emobility1 -->
+      <package
+            uri="http://www.example.org/station"
+            class="emobility.Station.StationPackage"
+            genModel="model/emobility1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emobility1 -->
+      <package
+            uri="http://www.example.org/operation"
+            class="emobility.Operation.OperationPackage"
+            genModel="model/emobility1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emobility1 -->
+      <package
+            uri="http://www.example.org/entreprise"
+            class="emobility.Enterprise.EnterprisePackage"
+            genModel="model/emobility1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emobility1 -->
+      <package
+            uri="http://www.example.org/market"
+            class="emobility.Market.MarketPackage"
+            genModel="model/emobility1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emobility1 -->
+      <package
+            uri="http://www.example.org/communication"
+            class="emobility.Communication.CommunicationPackage"
+            genModel="model/emobility1.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emobility -->
+      <package
+            uri="http://www.example.org/emobility"
+            class="emobility.EmobilityPackage"
+            genModel="model/emobility.genmodel"/>
+   </extension>
+
+</plugin>

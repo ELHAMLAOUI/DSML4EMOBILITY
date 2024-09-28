@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated emobility -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="emobility.presentation.EmobilityModelWizardID"
+            name="%_UI_EmobilityModelWizard_label"
+            class="emobility.presentation.EmobilityModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EmobilityModelFile.gif">
+         <description>%_UI_EmobilityModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated emobility -->
+      <editor
+            id="emobility.presentation.EmobilityEditorID"
+            name="%_UI_EmobilityEditor_label"
+            icon="icons/full/obj16/EmobilityModelFile.gif"
+            extensions="emobility"
+            class="emobility.presentation.EmobilityEditor"
+            contributorClass="emobility.presentation.EmobilityActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

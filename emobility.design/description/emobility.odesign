@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="emobility" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint" modelFileExtension="emobility">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Emobility system architecture" domainClass="emobility::EMobilityArchitecture" enablePopupBars="true">
+      <metamodel href="../../emobility/model/emobility.ecore#/"/>
+      <validationSet/>
+      <defaultLayer name="Default">
+        <edgeMappings name="Communication" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='APK'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Browser'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='CSMS'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='CSO'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Electric%20Vehicule'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='eMSP'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='EV%20User'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='EVSE'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Laptop'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Mobile'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='APK'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Browser'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='CSMS'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='CSO'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Electric%20Vehicule'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='eMSP'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='EV%20User'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='EVSE'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Laptop'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Mobile'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']" targetFinderExpression="feature:destination" sourceFinderExpression="feature:source" domainClass="emobility::Communication" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="feature:info_protocol">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Domain" domainClass="emobility::Domain">
+          <subNodeMappings name="EV User" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::EV_User">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/user.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="EVSE" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::EVSE">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/supply_equipement.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Mobile" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::Mobile">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/mobile.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Laptop" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::Laptop">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/computer.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="APK" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::APK">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/apk.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Browser" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::Browser">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/browser.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="eMSP" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::eMSP">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/emsp.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="CSMS" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::CSMS">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/csms.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="CSO" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::CSO">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/cso.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Electric Vehicule" semanticCandidatesExpression="feature:emobilityelement" domainClass="emobility::Electric_Vehicule">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/emobility.design/icons/ev.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="EV User" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='EV%20User']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::EV_User" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'USER'+container.emobilityelement->filter(emobility::EV_User)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Electric Vehicule" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Electric%20Vehicule']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::Electric_Vehicule" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'EV'+container.emobilityelement->filter(emobility::EVectric_Vehicule)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="EVSE" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='EVSE']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::EVSE" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'EVSE'+container.emobilityelement->filter(emobility::EVSE)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Mobile" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Mobile']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::Mobile" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Mobile'+container.emobilityelement->filter(emobility::Mobile)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Laptop" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Laptop']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::Laptop" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Laptop'+container.emobilityelement->filter(emobility::Laptop)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="APK" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='APK']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::APK" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'APK'+container.emobilityelement->filter(emobility::APK)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Browser" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='Laptop']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::Browser" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Browser'+container.emobilityelement->filter(emobility::Browser)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="eMSP" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='eMSP']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::eMSP" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'eMSP'+container.emobilityelement->filter(emobility::eMSP)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CSO" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='CSO']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::CSO" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'CSO'+container.emobilityelement->filter(emobility::CSO)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CSMS" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']/@subNodeMappings[name='CSMS']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::CSMS" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'CSMS'+container.emobilityelement->filter(emobility::CSMS)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@edgeMappings[name='Communication']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer()/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::Communication" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="destination" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'communication_'+source.name+'_'+target.name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Domain" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='Emobility%20system%20architecture']/@defaultLayer/@containerMappings[name='Domain']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="emobility::Domain" referenceName="emobilityelement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Domain'+container.emobilityelement->filter(emobility::Domain)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="emobility.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

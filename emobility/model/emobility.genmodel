@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/emobility/src" modelPluginID="emobility" modelName="Emobility"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>emobility.ecore</foreignModel>
+  <genPackages prefix="Emobility" disposableProviderFactory="true" ecorePackage="emobility.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//App_to_from_CS_operator_system_Cat">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_CS_operator_system_Cat/GPS_coordinates_of_a_middle_point_on_the_trip"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_CS_operator_system_Cat/Radius_value_for_Charging_Stations_filtering"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_CS_operator_system_Cat/GPS_coordinates"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_CS_operator_system_Cat/Charging_Station_ID"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//App_to_Battery_health_Cat">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_Battery_health_Cat/Parking_SoC_n_ambient_temp"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_Battery_health_Cat/Driving_SoC_discharge_rate_n_ambient_temp"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_Battery_health_Cat/Textual_description"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_Battery_health_Cat/Rationale"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_Battery_health_Cat/Weighing_factor_for_priorities"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//App_to_from_from_Route_Planning_Cat">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_from_Route_Planning_Cat/GPS_coordinates_source_n_destination"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_from_Route_Planning_Cat/List_of_GPS_coordinates_needed_for_navigation"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_from_Route_Planning_Cat/Traffic_Information"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//App_to_from_Energy_information_Cat">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_Energy_information_Cat/Country_code"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_Energy_information_Cat/Start_n_end_times"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_Energy_information_Cat/Percent_of_renewables"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//App_to_from_Energy_information_Cat/Energy_market_price"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//CS_manag_sys_to_from_CS_Controller_Cat">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CS_manag_sys_to_from_CS_Controller_Cat/Charging_Station_ID"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CS_manag_sys_to_from_CS_Controller_Cat/Connector_ID"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CS_manag_sys_to_from_CS_Controller_Cat/Status_Information"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//CS_operator_sys_to_from_CS_manag_sys_Cat">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CS_operator_sys_to_from_CS_manag_sys_Cat/Connector_ID_type_n_standard"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CS_operator_sys_to_from_CS_manag_sys_Cat/Maximum_capacity"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CS_operator_sys_to_from_CS_manag_sys_Cat/Charging_Station_ID"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//mOS_type">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//mOS_type/Android"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//mOS_type/iOS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//Battery_health_to_from_Sensors_Cat">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Battery_health_to_from_Sensors_Cat/Vehicle_Identification_Number"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Battery_health_to_from_Sensors_Cat/State_of_Charge"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Battery_health_to_from_Sensors_Cat/Remaining_range"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//Information_Protocol">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/ISO_IEC_15118"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/ISO_61851"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/OCPP"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/OSCP"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/OPEN_ADR"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/OCPI"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/OCHPDirect"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/OIPC"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/OCHP"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/eMIP"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/OASIS_EMIX"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/EnergyInterop"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/IEC_62325"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/EN_6232_301_351_Entso_e_MADES"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/IEEE_2023_5"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/IEC_61850"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/xDLMS_COSEM"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/IEC_61850_90_8"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Information_Protocol/API_REST"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//Vendor_Type">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Vendor_Type/Tesla"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Vendor_Type/BMW"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Vendor_Type/RenaultNissanMitsubishi"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Vendor_Type/MercerdesBenz"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Vendor_Type/GeelyAutoGroup"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Vendor_Type/Hyundai"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Vendor_Type/Stellantis"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Vendor_Type/Volkswagen"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Vendor_Type/BYD"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//OS_Type">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//OS_Type/Linux"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//OS_Type/Windows"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//Communication_Protocol">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/HTTP"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/HTTPS"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/TCP_IP"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/CAN"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/Flexray"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/Ethernet"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/TCP_IP_XML"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/PWM"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/CAN_CHAdeMO"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/ASN_1_MMS"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/EN_13321"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/HBES_KNX"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/ETHERNET_WIFI"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/IEC_61968_100_Energy_markets"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Communication_Protocol/EN_62325_450_451_marketplace"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//Security_Controls">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Security_Controls/Encryption"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Security_Controls/WAF"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Security_Controls/IP_Filtering"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Security_Controls/Antimalware"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Security_Controls/IPS_IDS"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Security_Controls/Authentication"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Security_Controls/API_Management"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//CIA_Level">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CIA_Level/L1"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CIA_Level/L2"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CIA_Level/L3"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//CIA_Level/L4"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//Threat_Category">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Threat_Category/Spoofing"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Threat_Category/Tampering"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Threat_Category/Repudiation"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Threat_Category/Information_Disclosure"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Threat_Category/Denial_of_Service"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Threat_Category/Elevation_of_Privilege"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emobility.ecore#//Likelihood_Level">
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Likelihood_Level/L3"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Likelihood_Level/L4"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Likelihood_Level/L1"/>
+      <genEnumLiterals ecoreEnumLiteral="emobility.ecore#//Likelihood_Level/L2"/>
+    </genEnums>
+    <genClasses ecoreClass="emobility.ecore#//CS_operator_sys_to_from_CS_manag_sys">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//CS_operator_sys_to_from_CS_manag_sys/data_type"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//App_to_from_Route_Planning">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//App_to_from_Route_Planning/data_type"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//CSO">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//CSO/emsp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//CSO/clearing_house"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//CS_Controller">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//CS_Controller/evse"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Energy_Conversion_Element"/>
+    <genClasses ecoreClass="emobility.ecore#//EMobilityElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//EMobilityElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//EMobilityElement/description"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//CSMS">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//CSMS/cs_controller"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//CSMS/server"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//EV_User">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//EV_User/laptop"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//EV_User/mobile"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//EMobilityArchitecture">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emobility.ecore#//EMobilityArchitecture/emobilityelement"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//DSO"/>
+    <genClasses ecoreClass="emobility.ecore#//Server">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Server/os_type"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//EVSE">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//EVSE/electric_vehicule"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Energy_Supplier"/>
+    <genClasses ecoreClass="emobility.ecore#//Laptop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emobility.ecore#//Laptop/browser"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//App_to_from_CS_operator_system">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//App_to_from_CS_operator_system/data_type"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Browser"/>
+    <genClasses ecoreClass="emobility.ecore#//App_to_Energy_information">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//App_to_Energy_information/data_type"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Battery_health_to_from_Sensors">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Battery_health_to_from_Sensors/data_type"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Service_API"/>
+    <genClasses ecoreClass="emobility.ecore#//Electric_Vehicule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Electric_Vehicule/vendor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Electric_Vehicule/evse"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Mobile">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emobility.ecore#//Mobile/apk"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Mobile/OS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emobility.ecore#//Mobile/browser"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Clearing_House">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Clearing_House/emsp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Clearing_House/cso"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//eMSP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//eMSP/cso"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//eMSP/service_api"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//eMSP/web_application"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//eMSP/clearing_house"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//APK"/>
+    <genClasses ecoreClass="emobility.ecore#//App_to_from_Battery_health">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//App_to_from_Battery_health/data_type"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//CS_manag_sys_to_from_CS_Controller">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//CS_manag_sys_to_from_CS_Controller/data_type"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Energy_Transfer_Element"/>
+    <genClasses ecoreClass="emobility.ecore#//EV_User_Element"/>
+    <genClasses ecoreClass="emobility.ecore#//Web_Application"/>
+    <genClasses ecoreClass="emobility.ecore#//EMobility_Data"/>
+    <genClasses ecoreClass="emobility.ecore#//Administrator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Administrator/csms"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Communication">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Communication/info_protocol"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Communication/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Communication/destination"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Communication/comm_protocol"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Communication/emobility_data"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Domain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emobility.ecore#//Domain/emobilityelement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emobility.ecore#//Domain/communication"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//SecurityControl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//SecurityControl/type"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Threat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Threat/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Threat/likelihood"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Threat/asset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Threat/risk_level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Threat/category"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Threat/exploits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Threat/implemented_security_controls"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Threat/mitigations"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Asset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Asset/Availability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Asset/Integrity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Asset/Confidentiality"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Asset/securitycontrol"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference emobility.ecore#//Asset/vulnerability"/>
+    </genClasses>
+    <genClasses ecoreClass="emobility.ecore#//Vulnerability">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Vulnerability/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emobility.ecore#//Vulnerability/description"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

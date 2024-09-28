@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="emobility" nsURI="http://www.example.org/emobility" nsPrefix="emobility">
+  <eClassifiers xsi:type="ecore:EEnum" name="App_to_from_CS_operator_system_Cat">
+    <eLiterals name="GPS_coordinates_of_a_middle_point_on_the_trip"/>
+    <eLiterals name="Radius_value_for_Charging_Stations_filtering" value="1"/>
+    <eLiterals name="GPS_coordinates" value="2"/>
+    <eLiterals name="Charging_Station_ID" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="App_to_Battery_health_Cat">
+    <eLiterals name="Parking_SoC_n_ambient_temp"/>
+    <eLiterals name="Driving_SoC_discharge_rate_n_ambient_temp" value="1"/>
+    <eLiterals name="Textual_description" value="2"/>
+    <eLiterals name="Rationale" value="3"/>
+    <eLiterals name="Weighing_factor_for_priorities" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CS_operator_sys_to_from_CS_manag_sys"
+      eSuperTypes="#//EMobility_Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_type" eType="#//CS_operator_sys_to_from_CS_manag_sys_Cat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="App_to_from_Route_Planning" eSuperTypes="#//EMobility_Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_type" eType="#//App_to_from_from_Route_Planning_Cat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="App_to_from_from_Route_Planning_Cat">
+    <eLiterals name="GPS_coordinates_source_n_destination"/>
+    <eLiterals name="List_of_GPS_coordinates_needed_for_navigation" value="1"/>
+    <eLiterals name="Traffic_Information" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="App_to_from_Energy_information_Cat">
+    <eLiterals name="Country_code"/>
+    <eLiterals name="Start_n_end_times" value="1"/>
+    <eLiterals name="Percent_of_renewables" value="2"/>
+    <eLiterals name="Energy_market_price" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CS_manag_sys_to_from_CS_Controller_Cat">
+    <eLiterals name="Charging_Station_ID"/>
+    <eLiterals name="Connector_ID" value="1"/>
+    <eLiterals name="Status_Information" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CS_operator_sys_to_from_CS_manag_sys_Cat">
+    <eLiterals name="Connector_ID_type_n_standard"/>
+    <eLiterals name="Maximum_capacity" value="1"/>
+    <eLiterals name="Charging_Station_ID" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CSO" eSuperTypes="#//Energy_Transfer_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emsp" eType="#//eMSP" eOpposite="#//eMSP/cso"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clearing_house" eType="#//Clearing_House"
+        eOpposite="#//Clearing_House/cso"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CS_Controller" eSuperTypes="#//Energy_Transfer_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evse" upperBound="-1" eType="#//EVSE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Energy_Conversion_Element" abstract="true"
+      eSuperTypes="#//EMobilityElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EMobilityElement" abstract="true" eSuperTypes="#//Asset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CSMS" eSuperTypes="#//Energy_Transfer_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cs_controller" upperBound="-1"
+        eType="#//CS_Controller"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" eType="#//Server"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="mOS_type">
+    <eLiterals name="Android"/>
+    <eLiterals name="iOS" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EV_User" eSuperTypes="#//EV_User_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="laptop" eType="#//Laptop"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mobile" eType="#//Mobile"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EMobilityArchitecture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emobilityelement" upperBound="-1"
+        eType="#//EMobilityElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DSO" eSuperTypes="#//Energy_Conversion_Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//Energy_Transfer_Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="os_type" eType="#//OS_Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Battery_health_to_from_Sensors_Cat">
+    <eLiterals name="Vehicle_Identification_Number"/>
+    <eLiterals name="State_of_Charge" value="1"/>
+    <eLiterals name="Remaining_range" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EVSE" eSuperTypes="#//Energy_Transfer_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="electric_vehicule" eType="#//Electric_Vehicule"
+        eOpposite="#//Electric_Vehicule/evse"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Energy_Supplier" eSuperTypes="#//Energy_Conversion_Element"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Information_Protocol">
+    <eLiterals name="ISO_IEC_15118"/>
+    <eLiterals name="ISO_61851" value="1"/>
+    <eLiterals name="OCPP" value="2"/>
+    <eLiterals name="OSCP" value="3"/>
+    <eLiterals name="OPEN_ADR" value="4"/>
+    <eLiterals name="OCPI" value="5"/>
+    <eLiterals name="OCHPDirect" value="6"/>
+    <eLiterals name="OIPC" value="7"/>
+    <eLiterals name="OCHP" value="8"/>
+    <eLiterals name="eMIP" value="10"/>
+    <eLiterals name="OASIS_EMIX" value="11"/>
+    <eLiterals name="EnergyInterop" value="11"/>
+    <eLiterals name="IEC_62325" value="12"/>
+    <eLiterals name="EN_6232_301_351_Entso_e_MADES" value="13"/>
+    <eLiterals name="IEEE_2023_5" value="14"/>
+    <eLiterals name="IEC_61850" value="15"/>
+    <eLiterals name="xDLMS_COSEM" value="16"/>
+    <eLiterals name="IEC_61850_90_8" value="17"/>
+    <eLiterals name="API_REST" value="18"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Laptop" eSuperTypes="#//EV_User_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="browser" upperBound="-1"
+        eType="#//Browser" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="App_to_from_CS_operator_system" eSuperTypes="#//EMobility_Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_type" eType="#//App_to_from_CS_operator_system_Cat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Browser" eSuperTypes="#//EV_User_Element"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Vendor_Type">
+    <eLiterals name="Tesla"/>
+    <eLiterals name="BMW" value="1"/>
+    <eLiterals name="RenaultNissanMitsubishi" value="2"/>
+    <eLiterals name="MercerdesBenz" value="3"/>
+    <eLiterals name="GeelyAutoGroup" value="4"/>
+    <eLiterals name="Hyundai" value="5"/>
+    <eLiterals name="Stellantis" value="6"/>
+    <eLiterals name="Volkswagen" value="7"/>
+    <eLiterals name="BYD" value="8"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="App_to_Energy_information" eSuperTypes="#//EMobility_Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_type" eType="#//App_to_from_Energy_information_Cat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Battery_health_to_from_Sensors" eSuperTypes="#//EMobility_Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_type" eType="#//Battery_health_to_from_Sensors_Cat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OS_Type">
+    <eLiterals name="Linux"/>
+    <eLiterals name="Windows" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Service_API" eSuperTypes="#//EV_User_Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Electric_Vehicule" eSuperTypes="#//EMobilityElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vendor" eType="#//Vendor_Type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evse" eType="#//EVSE" eOpposite="#//EVSE/electric_vehicule"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mobile" eSuperTypes="#//EV_User_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="apk" upperBound="-1" eType="#//APK"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="OS" eType="#//mOS_type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="browser" upperBound="-1"
+        eType="#//Browser" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Clearing_House" eSuperTypes="#//EV_User_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emsp" eType="#//eMSP" eOpposite="#//eMSP/clearing_house"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cso" eType="#//CSO" eOpposite="#//CSO/clearing_house"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="eMSP" eSuperTypes="#//EV_User_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cso" eType="#//CSO" eOpposite="#//CSO/emsp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="service_api" eType="#//Service_API"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="web_application" eType="#//Web_Application"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clearing_house" eType="#//Clearing_House"
+        eOpposite="#//Clearing_House/emsp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="APK" eSuperTypes="#//EV_User_Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="App_to_from_Battery_health" eSuperTypes="#//EMobility_Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_type" eType="#//App_to_Battery_health_Cat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Communication_Protocol">
+    <eLiterals name="HTTP"/>
+    <eLiterals name="HTTPS" value="1"/>
+    <eLiterals name="TCP_IP" value="2"/>
+    <eLiterals name="CAN" value="3"/>
+    <eLiterals name="Flexray" value="4"/>
+    <eLiterals name="Ethernet" value="5"/>
+    <eLiterals name="TCP_IP_XML" value="6"/>
+    <eLiterals name="PWM" value="7"/>
+    <eLiterals name="CAN_CHAdeMO" value="8"/>
+    <eLiterals name="ASN_1_MMS" value="9"/>
+    <eLiterals name="EN_13321" value="10"/>
+    <eLiterals name="HBES_KNX" value="11"/>
+    <eLiterals name="ETHERNET_WIFI" value="12"/>
+    <eLiterals name="IEC_61968_100_Energy_markets" value="13"/>
+    <eLiterals name="EN_62325_450_451_marketplace" value="14"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CS_manag_sys_to_from_CS_Controller"
+      eSuperTypes="#//EMobility_Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_type" eType="#//CS_manag_sys_to_from_CS_Controller_Cat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Energy_Transfer_Element" abstract="true"
+      eSuperTypes="#//EMobilityElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EV_User_Element" abstract="true" eSuperTypes="#//EMobilityElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Web_Application" eSuperTypes="#//EV_User_Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EMobility_Data" abstract="true" eSuperTypes="#//Asset"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Administrator" eSuperTypes="#//Energy_Transfer_Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="csms" eType="#//CSMS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Communication" eSuperTypes="#//EMobilityElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="info_protocol" eType="#//Information_Protocol"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//EMobilityElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//EMobilityElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comm_protocol" eType="#//Communication_Protocol"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emobility_data" upperBound="-1"
+        eType="#//EMobility_Data"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="#//EMobilityElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emobilityelement" upperBound="-1"
+        eType="#//EMobilityElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communication" upperBound="-1"
+        eType="#//Communication" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityControl" eSuperTypes="#//EMobilityElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Security_Controls"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Security_Controls">
+    <eLiterals name="Encryption"/>
+    <eLiterals name="WAF" value="1"/>
+    <eLiterals name="IP_Filtering" value="2"/>
+    <eLiterals name="Antimalware" value="3"/>
+    <eLiterals name="IPS_IDS" value="4"/>
+    <eLiterals name="Authentication" value="5"/>
+    <eLiterals name="API_Management" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CIA_Level">
+    <eLiterals name="L1" value="1"/>
+    <eLiterals name="L2" value="2"/>
+    <eLiterals name="L3" value="3"/>
+    <eLiterals name="L4" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Threat" eSuperTypes="#//EMobilityElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="likelihood" eType="#//Likelihood_Level"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asset" eType="#//Asset"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="risk_level" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Integer"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="#//Threat_Category"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exploits" upperBound="-1"
+        eType="#//Vulnerability"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implemented_security_controls"
+        upperBound="-1" eType="#//SecurityControl"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigations" upperBound="-1"
+        eType="#//SecurityControl"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Asset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Availability" eType="#//CIA_Level"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Integrity" eType="#//CIA_Level"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Confidentiality" eType="#//CIA_Level"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securitycontrol" upperBound="-1"
+        eType="#//SecurityControl"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vulnerability" upperBound="-1"
+        eType="#//Vulnerability" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Threat_Category">
+    <eLiterals name="Spoofing"/>
+    <eLiterals name="Tampering" value="1"/>
+    <eLiterals name="Repudiation" value="2"/>
+    <eLiterals name="Information_Disclosure" value="2"/>
+    <eLiterals name="Denial_of_Service" value="2"/>
+    <eLiterals name="Elevation_of_Privilege" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Likelihood_Level">
+    <eLiterals name="L3" value="3"/>
+    <eLiterals name="L4" value="4"/>
+    <eLiterals name="L1" value="1"/>
+    <eLiterals name="L2" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vulnerability">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+</ecore:EPackage>
